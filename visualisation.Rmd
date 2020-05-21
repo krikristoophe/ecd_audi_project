@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+datas <- read.csv("./bus_signals.csv", header=T)
+```
+```{r}
+plot(datas$timestamp, datas$accelerator_pedal, type='l')
+plot(datas$timestamp, datas$brake_pressure, type='l')
+```
+
+```{r}
+plot(datas$distance_pulse_front_right, datas$distance_pulse_rear_right, type='p')
+plot(datas$distance_pulse_front_left, datas$distance_pulse_rear_left, type='p')
+plot(datas$distance_pulse_front_left, datas$distance_pulse_front_right, type='p')
+plot(datas$distance_pulse_rear_left, datas$distance_pulse_rear_right, type='p')
+```
+
